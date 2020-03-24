@@ -7,6 +7,8 @@ There are two datasets, both of which are made up of melspectogram pngs of size 
 
 The second dataset is more difficult to classify as there are a larger number of classes and because the classes are much more similar to each other.
 
+The melspectograms are titled with their track ID as given by the spotify API. The labels for the first dataset can be found [in the corresponding csv file](https://github.com/iarfmoose/genre_classifier/blob/master/genre_classifier/spotify_track_preview_data.csv). The labels for the metal subgenre dataset are in the same file as the tabular data which is metal_track_data.csv [inside the zip file for the second dataset](https://drive.google.com/open?id=1Hv9AsEHdx5mKL7o6io_XegeQfVOPjP9g).
+
 The datasets can be downloaded here:
 + [Genres dataset](https://drive.google.com/open?id=1lLREvqrvjv907NHXm7ExJdUOXUsTO91R)
 + [Metal subgenres dataset](https://drive.google.com/open?id=1Hv9AsEHdx5mKL7o6io_XegeQfVOPjP9g)
