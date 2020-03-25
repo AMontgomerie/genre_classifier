@@ -1,4 +1,4 @@
-The goal of this project was to attempt to classify music genres from melspectograms of tracks by using neural networks. There are two datasets and two models.
+The goal of this project was to attempt to classify music genres from melspectograms of tracks by using neural networks. There are two datasets and two models. A more detailed report of the project can be found [here](https://drive.google.com/file/d/1D8KfViG-MR7UjyeWHBGjieJvQ7Pf3tHv/view?usp=sharing).
 
 # Datasets
 There are two datasets, both of which are made up of melspectogram pngs of size 128x1292. The melspectograms were created by downloading 30 second song samples using the Spotify API. The samples were then converted to melspectograms were then generated using librosa.
