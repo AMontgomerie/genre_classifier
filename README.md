@@ -17,7 +17,7 @@ The datasets can be downloaded here:
 ## genre_classifier
 This is a neural network which uses convolutional and recurrent layers to classify the genres of melspectograms from the first dataset.
 
-The network architecture is based on [Convolutional Recurrent Neural Networks For Music Classification](https://arxiv.org/pdf/1609.04243.pdf) by Keunwoo Choi et al. The CRNN architecture takes an image as input and then passes it through 4 convolutional layers. The output is then passed through a 2 layer GRU and finally softmax. The network is able to achieve an 80% accuracy rate.
+The network architecture is based on [Convolutional Recurrent Neural Networks For Music Classification](https://arxiv.org/pdf/1609.04243.pdf) by Keunwoo Choi et al. The CRNN architecture takes an image as input and then passes it through 4 convolutional layers. The output is then passed through a 2 layer GRU and finally softmax. The network is able to achieve an 80% accuracy rate (80% for top 1 accuracy, and 98% top 5 accuracy).
 
 ## metal_subgenre_classifier
 The model is based on the same CRNN architecture as the genre_classifier. However there is also a 2 layer fully-connected network which takes tabular track data as an input, and whose output is concatenated with the output of the GRU before being passed through a softmax.
