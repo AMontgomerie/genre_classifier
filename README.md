@@ -22,4 +22,4 @@ The network architecture is based on [Convolutional Recurrent Neural Networks Fo
 ## metal_subgenre_classifier
 The model is based on the same CRNN architecture as the genre_classifier. However there is also a 2 layer fully-connected network which takes tabular track data as an input, and whose output is concatenated with the output of the GRU before being passed through a softmax.
 
-The addition of the tabular data slightly improves the accuracy of the model. However, the final accuracy of the model is only 62%, which is lower than the other model. This is probably due to the increased difficulty of classifying similar sub-genres rather than more distinct genre categories.
+The addition of the tabular data slightly improves the accuracy of the model. However, the final accuracy of the model is only 62%, which is lower than the other model (62% top 1 accuracy, but 92% top 5 accuracy). This is probably due to the increased difficulty of classifying similar sub-genres rather than more distinct genre categories.
