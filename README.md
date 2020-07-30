@@ -1,13 +1,13 @@
-The goal of this project was to attempt to classify music genres from melspectograms of tracks by using neural networks. There are two datasets and two models. A more detailed report of the project can be found [here](https://drive.google.com/file/d/1D8KfViG-MR7UjyeWHBGjieJvQ7Pf3tHv/view?usp=sharing).
+The goal of this project was to attempt to classify music genres from melspectrograms of tracks by using neural networks. There are two datasets and two models. A more detailed report of the project can be found [here](https://drive.google.com/file/d/1D8KfViG-MR7UjyeWHBGjieJvQ7Pf3tHv/view?usp=sharing).
 
 # Datasets
-There are two datasets, both of which are made up of melspectogram pngs of size 128x1292. The melspectograms were created by downloading 30 second song samples using the Spotify API. The samples were then converted to melspectograms were then generated using librosa.
+There are two datasets, both of which are made up of melspectrogram pngs of size 128x1292. The melspectrograms were created by downloading 30 second song samples using the Spotify API. The samples were then converted to melspectrograms were then generated using librosa.
 
-[The first dataset](https://drive.google.com/open?id=1lLREvqrvjv907NHXm7ExJdUOXUsTO91R) is about 40,000 melspectogram images which represent the following genres: pop, rock, rap, metal, house, r&b, classical, techno, jazz, and folk. [The second dataset](https://drive.google.com/open?id=1Hv9AsEHdx5mKL7o6io_XegeQfVOPjP9g) is made up of over 100,000 spectograms representing a range of heavy metal, punk, and hardcore subgenres. The second dataset also includes additional tabular track data acquired from the Spotify API such as duration, mode, key, etc.
+[The first dataset](https://drive.google.com/open?id=1lLREvqrvjv907NHXm7ExJdUOXUsTO91R) is about 40,000 melspectrogram images which represent the following genres: pop, rock, rap, metal, house, r&b, classical, techno, jazz, and folk. [The second dataset](https://drive.google.com/open?id=1Hv9AsEHdx5mKL7o6io_XegeQfVOPjP9g) is made up of over 100,000 spectrograms representing a range of heavy metal, punk, and hardcore subgenres. The second dataset also includes additional tabular track data acquired from the Spotify API such as duration, mode, key, etc.
 
 The second dataset is more difficult to classify as there are a larger number of classes and because the classes are much more similar to each other.
 
-The melspectograms are titled with their track ID as given by the spotify API. The labels for the first dataset can be found [in the corresponding csv file](https://github.com/iarfmoose/genre_classifier/blob/master/genre_classifier/spotify_track_preview_data.csv). The labels for the metal subgenre dataset are in the same file as the tabular data which is metal_track_data.csv [inside the zip file for the second dataset](https://drive.google.com/open?id=1Hv9AsEHdx5mKL7o6io_XegeQfVOPjP9g).
+The melspectrograms are titled with their track ID as given by the spotify API. The labels for the first dataset can be found [in the corresponding csv file](https://github.com/iarfmoose/genre_classifier/blob/master/genre_classifier/spotify_track_preview_data.csv). The labels for the metal subgenre dataset are in the same file as the tabular data which is metal_track_data.csv [inside the zip file for the second dataset](https://drive.google.com/open?id=1Hv9AsEHdx5mKL7o6io_XegeQfVOPjP9g).
 
 The datasets can be downloaded here:
 + [Genres dataset](https://drive.google.com/open?id=1lLREvqrvjv907NHXm7ExJdUOXUsTO91R)
@@ -15,7 +15,7 @@ The datasets can be downloaded here:
 
 # Models
 ## genre_classifier
-This is a neural network which uses convolutional and recurrent layers to classify the genres of melspectograms from the first dataset.
+This is a neural network which uses convolutional and recurrent layers to classify the genres of melspectrograms from the first dataset.
 
 The network architecture is based on [Convolutional Recurrent Neural Networks For Music Classification](https://arxiv.org/pdf/1609.04243.pdf) by Keunwoo Choi et al. The CRNN architecture takes an image as input and then passes it through 4 convolutional layers. The output is then passed through a 2 layer GRU and finally softmax. The network is able to achieve an 80% accuracy rate (80% for top 1 accuracy, and 98% top 5 accuracy).
 
